@@ -1,0 +1,13 @@
+#!/bin/sh
+#SBATCH -N 17
+#SBATCH --tasks-per-node=28
+#SBATCH -J test
+#SBATCH -o %j.log_out
+#SBATCH -e %j.log_err
+#SBATCH -t 948:00:00
+#SBATCH -p compute
+
+python3 /home/odud/SG221_TiO6_orca_calc/embopt_Ti_large2/ChOpt_3_pik_4.py 1e-4 1e-5 17 999
+
+
+
